@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+	<title>旋转相册</title>
+	<style>
+	*{margin:0;padding:0;}
+	html,body{height:100%;}
+	body{background:url(images/bg2.jpg) no-repeat left top /100% 100%;}
+	div{width:300px;height:400px;position:fixed;left:0;right:0;top:0;bottom:0;margin:auto;background:url(images/a.gif) no-repeat center center;-webkit-transform-style:preserve-3d;animation:mymove 10s linear infinite}
+	img{width:300px;height:400px;position:absolute;left:0;top:0;-webkit-transform-origin:center center -300px;}
+	img:first-child{-webkit-transform:translateZ(600px) rotateY(0deg);}
+	img:nth-child(2){-webkit-transform:translateZ(600px) rotateY(36deg);}
+	img:nth-child(3){-webkit-transform:translateZ(600px) rotateY(72deg);}
+	img:nth-child(4){-webkit-transform:translateZ(600px) rotateY(108deg);}
+	img:nth-child(5){-webkit-transform:translateZ(600px) rotateY(144deg);}
+	img:nth-child(6){-webkit-transform:translateZ(600px) rotateY(180deg);}
+	img:nth-child(7){-webkit-transform:translateZ(600px) rotateY(216deg);}
+	img:nth-child(8){-webkit-transform:translateZ(600px) rotateY(252deg);}
+	img:nth-child(9){-webkit-transform:translateZ(600px) rotateY(288deg);}
+	img:nth-child(10){-webkit-transform:translateZ(600px) rotateY(324deg);}
+
+	@keyframes mymove{
+		0%{-webkit-transform:rotateY(0deg) rotateX(0deg);}
+		25%{-webkit-transform:rotateY(90deg) rotateX(20deg);}
+		50%{-webkit-transform:rotateY(180deg) rotateX(0deg);}
+		75%{-webkit-transform:rotateY(240deg) rotateX(-20deg);}
+		100%{-webkit-transform:rotateY(360deg) rotateX(0deg);}
+	}
+	video{
+		opacity:0;
+	}
+	</style>
+</head>
+
+<body>
+<div>
+	<img src="images/pic1.jpg" alt="">
+	<img src="images/pic2.png" alt="">
+	<img src="images/pic3.png" alt="">
+	<img src="images/pic4.png" alt="">
+	<img src="images/pic5.jpg" alt="">
+	<img src="images/pic6.png" alt="">
+	<img src="images/pic7.png" alt="">
+	<img src="images/pic8.png" alt="">
+	<img src="images/pic9.png" alt="">
+	<img src="images/pic10.png" alt="">
+	<video src="images/aaaaa.mp3" autoplay loop></video>
+</div>
+</body>
+</html>
